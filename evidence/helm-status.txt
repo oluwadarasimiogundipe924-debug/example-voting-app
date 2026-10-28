@@ -1,0 +1,6 @@
+NAME: voting-app
+LAST DEPLOYED: Tue Oct 27 17:00:13 2026
+NAMESPACE: voting
+STATUS: deployed
+REVISION: 4
+TEST SUITE: None

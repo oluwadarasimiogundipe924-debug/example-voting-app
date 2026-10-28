@@ -1,16 +1,10 @@
-FROM python:3.9-slim
+FROM python:3.11-slim-bookworm@sha256:0a310eeecf4e1f5a0743f9a6520c90c88d089c903ca5fd283f501e3a805f5f89
 
-# add apache bench (ab) tool
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    apache2-utils \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update &&     apt-get install -y --no-install-recommends apache2-utils &&     rm -rf /var/lib/apt/lists/* &&     useradd --system --uid 10001 --create-home appuser
 
 WORKDIR /seed
+COPY --chown=10001:10001 . .
+RUN python make-data.py && chown -R 10001:10001 /seed
 
-COPY . .
-
-# create POST data files with ab friendly formats
-RUN python make-data.py
-
+USER 10001:10001
 CMD ["/seed/generate-votes.sh"]

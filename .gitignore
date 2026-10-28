@@ -4,3 +4,10 @@ bin/
 obj/
 .vs/
 node_modules/
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+terraform.tfvars
+*.tfplan

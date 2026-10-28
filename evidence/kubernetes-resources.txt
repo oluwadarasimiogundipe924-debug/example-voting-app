@@ -1,0 +1,12 @@
+NAME                           READY   STATUS    RESTARTS      AGE   IP            NODE                            NOMINATED NODE   READINESS GATES
+pod/postgres-88d887d55-mv8l6   1/1     Running   1 (93m ago)   20h   10.244.0.10   voting-capstone-control-plane   <none>           <none>
+pod/redis-5d4f6ff447-2dhgt     1/1     Running   1 (93m ago)   20h   10.244.0.14   voting-capstone-control-plane   <none>           <none>
+pod/result-bb8c9956-6hp8d      1/1     Running   1 (93m ago)   20h   10.244.0.2    voting-capstone-control-plane   <none>           <none>
+pod/vote-6f64b78c4f-x7rpb      1/1     Running   1 (93m ago)   20h   10.244.0.12   voting-capstone-control-plane   <none>           <none>
+pod/worker-f747c96c4-p2rjp     1/1     Running   1 (93m ago)   20h   10.244.0.11   voting-capstone-control-plane   <none>           <none>
+
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR
+service/db       ClusterIP   10.96.219.47    <none>        5432/TCP   20h   app=postgres
+service/redis    ClusterIP   10.96.67.178    <none>        6379/TCP   20h   app=redis
+service/result   ClusterIP   10.96.44.25     <none>        8081/TCP   20h   app=result
+service/vote     ClusterIP   10.96.206.104   <none>        8080/TCP   20h   app=vote

@@ -1,0 +1,6 @@
+REVISION	UPDATED                 	STATUS    	CHART           	APP VERSION	DESCRIPTION                                                                                                    
+1       	Mon Oct 26 21:53:52 2026	superseded	voting-app-0.1.0	1.16.0     	Release "voting-app" failed: 2 errors occurred:                                                                
+        	                        	          	                	           		* Service "result" is invalid: spec.ports[0].nodePort: Invali...                                               
+2       	Mon Oct 26 21:56:05 2026	superseded	voting-app-0.1.0	1.16.0     	Upgrade complete                                                                                               
+3       	Tue Oct 27 16:59:46 2026	superseded	voting-app-0.1.0	1.16.0     	Upgrade complete                                                                                               
+4       	Tue Oct 27 17:00:13 2026	deployed  	voting-app-0.1.0	1.16.0     	Rollback to 2                                                                                                  
